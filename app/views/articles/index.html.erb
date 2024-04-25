@@ -1,0 +1,12 @@
+<h1>Products</h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.name%>
+        <%= link_to product.price%>
+        <%= link_to product.quantity%>
+        <%= link_to product.description%>
+    </li>
+    <%= link_to 'Buy', buy_product_path(product), method: :post %>
+  <% end %>
+</ul>
