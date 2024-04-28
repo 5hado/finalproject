@@ -1,0 +1,19 @@
+
+<h1><%= @product.name %></h1>
+<p>Price: $<%= @product.price %></p>
+<p>How many for sale: <%= @product.quantity %></p>
+<p>Product Description: <%= @product.description %></p>
+
+<h2>Reviews</h2>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li>
+        <strong>Buyer:</strong> <%= review.author %><br>
+        <strong>Rating:</strong> <%= review.rating %>/5<br>
+        <%= review.content %>
+        <h1></h1>
+      </li>
+    <% end %>
+  </ul>
+
+

@@ -7,12 +7,22 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Product.create(name: "Name1", price: 20.99, quantity: 50, description: "description")
+product1 = Product.create(name: "Monitor", price: 200, quantity: 5, description: "1080p 60hz monitor.")
 
-Product.create(name: "Name2", price: 20.99, quantity: 50, description: "description")
+product2 = Product.create(name: "Keyboard", price: 70, quantity: 1, description: "110% keyboard with LED lights under the keys.")
 
-Product.create(name: "Name3", price: 20.99, quantity: 50, description: "description")
+product3 = Product.create(name: "Mouse", price: 20, quantity: 20, description: "50% off mouse Limited time buy now!!!")
 
-Product.create(name: "Name4", price: 20.99, quantity: 50, description: "description")
+product4 =Product.create(name: "GPU", price: 450, quantity: 3, description: "3060Ti Super")
 
-Product.create(name: "Name5", price: 20.99, quantity: 50, description: "description")
+Review.create(author: "John Doe", content: "Great product!", rating: 5, product: product1)
+Review.create(author: "Megan Smith", content: "Amazing video quality.", rating: 5, product: product1)
+
+Review.create(author: "Daniel Johnson", content: "Too big and takes up too much desk space.", rating: 2, product: product2)
+Review.create(author: "Emily Brown", content: "A little too loud but other then that perfect.", rating: 4, product: product2)
+
+Review.create(author: "Brandon Jones", content: "Cheaply made.", rating: 2, product: product3)
+Review.create(author: "Rachel Martinez", content: "Not worth the money, even with it being on sale.", rating: 1, product: product3)
+
+Review.create(author: "Tyler Davis", content: "Overclocked it and fried it.", rating: 4, product: product4)
+Review.create(author: "Amanda Taylor", content: "Works fine, don't know what else to tell you.", rating: 5, product: product4)
